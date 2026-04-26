@@ -12,19 +12,19 @@ import static org.mockito.Mockito.when;
 public class CatTest {
 
     @Mock
-    private Predator mockPredator;
+    private Feline mockFeline;  // заменено Predator на Feline
 
     @Test
     public void testGetSound() {
-        Cat cat = new Cat(mockPredator);
+        Cat cat = new Cat(mockFeline);
         assertEquals("Мяу", cat.getSound());
     }
 
     @Test
     public void testGetFood() throws Exception {
         List<String> expectedFood = List.of("Мышь", "Птица");
-        when(mockPredator.eatMeat()).thenReturn(expectedFood);
-        Cat cat = new Cat(mockPredator);
+        when(mockFeline.eatMeat()).thenReturn(expectedFood);
+        Cat cat = new Cat(mockFeline);
         assertEquals(expectedFood, cat.getFood());
     }
 }

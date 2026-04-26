@@ -1,9 +1,6 @@
 package com.example;
 
 import java.util.List;
-package com.example;
-
-import java.util.List;
 
 public class Cat {
 
